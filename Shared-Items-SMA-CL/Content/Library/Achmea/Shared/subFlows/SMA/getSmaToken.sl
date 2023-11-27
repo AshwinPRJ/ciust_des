@@ -9,7 +9,7 @@ flow:
         default: "${get_sp('Achmea.SMA.Password')}"
         sensitive: true
   workflow:
-    - admin:
+    - admin_12:
         do:
           io.cloudslang.base.http.http_client_post:
             - url: "${smaUrl + '/auth/authentication-endpoint/authenticate/token?TENANTID=' + smaTennant}"
@@ -35,7 +35,7 @@ flow:
 extensions:
   graph:
     steps:
-      admin:
+      admin_12:
         x: 320
         'y': 200
         navigate:
